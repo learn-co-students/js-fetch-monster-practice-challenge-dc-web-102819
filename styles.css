@@ -1,0 +1,29 @@
+#night-mode {
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+#night-mode li {
+	border: 2px solid #FFFFFF;
+}
+
+#button-container {
+	margin-top: 10px;
+}
+
+#create-monster {
+	margin-bottom: 10px;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	border-radius: 25px;
+	border: 2px solid #000000;
+	padding: 20px;
+	margin-bottom: 15px;
+	width: 70%;
+	/*height: 150px;*/
+}
