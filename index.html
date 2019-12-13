@@ -3,14 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>Monstr</title>
-    <!-- <script src='js/index.js'></script> -->
-    <script src='js/demo.js'></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src='js/index.js'></script>
+    <!-- <script src='js/demo.js'></script> -->
   </head>
   <body>
     <h1>Monstr Inc.</h1>
     <div id='create-monster'></div>
-    <div id='monster-container'></div>
-    <button id="back"><=</button>
-    <button id="forward">=></button>
+    <div id='monster-container'>
+      <hr>
+      <div id="button-container">
+        <button id="back"><= Previous Page</button>
+        <button id="forward">Next Page =></button>
+      </div>
+      <ul id="monster-list"></ul>
+      </div>
   </body>
 </html>
