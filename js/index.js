@@ -107,6 +107,7 @@ function addPagination(page, limit, total) {
 
 	if (page === 1) {
 		document.querySelector("#back").disabled = true;
+		document.querySelector("#forward").disabled = false;
 	} else {
 		document.querySelector("#back").disabled = false;
 	}
@@ -122,6 +123,9 @@ function getMonsters(page=1, limit=50) {
 	fetch(`http://localhost:3000/monsters/?_limit=${limit}&_page=${page}`)
 		.then(response => response.json())
 		.then(json => {
+			if (json.length === 0) {
+				document.querySelector("#forward").disabled = true;
+			}
 			// json.reverse()
 			let total = json.length;
 			addPagination(page, limit, total);
@@ -178,6 +182,7 @@ function changePage(event) {
 		getMonsters(currentPage)
 		// addPagination(currentPage + 1)
 	} else {
+		document.querySelector("#forward").disabled = false;
 		getMonsters(currentPage - 1)
 		// addPagination(currentPage - 1)
 	}
