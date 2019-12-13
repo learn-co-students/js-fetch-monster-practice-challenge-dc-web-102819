@@ -42,7 +42,7 @@ function buildMonsterForm() {
 	monsterForm.appendChild(age);
 
 	description.id = "description";
-	description.placeholder = "I come from the land down under";
+	description.placeholder = "I come from the land down under...";
 	monsterForm.appendChild(description);
 
 	submit.id = "submit";

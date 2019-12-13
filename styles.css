@@ -18,6 +18,14 @@
 	margin-left: 20px;
 }
 
+#monster-form input {
+	margin-right: 10px;
+}
+
+input#description {
+	width: 200px;
+}
+
 ul {
 	list-style: none;
 }
