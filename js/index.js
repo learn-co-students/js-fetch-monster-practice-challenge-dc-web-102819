@@ -63,7 +63,7 @@ function createMonster(name, age, description) {
     'age': parseInt(age),
     'description': description
   }
-  debugger
+
   let conObj = {
     method: 'POST',
     headers: {
@@ -73,10 +73,12 @@ function createMonster(name, age, description) {
     body: JSON.stringify(data)
   }
 
-  return fetch('http://localhost:3000/monsters', conObj)
+  fetch('http://localhost:3000/monsters', conObj)
   .then(response => response.json())
   .then(postMonster => doSomethingElse(postMonster))
   .catch(err => console.log(err.message))
+
+  getMonsterForm().reset()
 }
 
 function doSomethingElse(newMonster) {
