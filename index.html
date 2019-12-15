@@ -4,12 +4,18 @@
     <meta charset="utf-8">
     <title>Monstr</title>
     <!-- <script src='js/demo.js'></script> -->
+    <link rel="stylesheet" type="text/css" href="./css/semantic.min.css">
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script src="./css/semantic.min.js"></script>
   </head>
   <body>
     <div id="container">
       <h1>Monstr Inc.</h1>
-      <button id="filter-25">Show 25 Monsters</button>
-      <button id="filter-100">Show 50 Monsters</button>
+      <!-- <button id="filter-25">Show 25 Monsters</button>
+      <button id="filter-100">Show 50 Monsters</button> -->
 
       <div id='create-monster'>
         <!-- Creating form monsters -->
@@ -27,10 +33,15 @@
       <!-- div monster container -->
       <div id='monster-container'>
 
-
       </div>
-      <button id="back"><=</button>
-      <button id="forward">=></button>
+
+      <div id="monster-footer">
+        <p id="current-page" ></p>
+        <div id="button-container">
+          <button id="previous">Previous</button>
+          <button id="next">Next</button>
+        </div>
+      </div>
 
     </div>
     <script src='js/index.js'></script>

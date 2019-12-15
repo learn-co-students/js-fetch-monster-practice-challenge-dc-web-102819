@@ -6038,6 +6038,18 @@
       "age": 981237917823,
       "description": "Kurupi is said to be somewhat similar in appearance to another, more popular figure from Guaraní mythology, the Pombero. Like the Pombero, Kurupi is said to be short, ugly, and hairy. He makes his home in the wild forests of the region, and was considered to be the lord of the forests and protector of wild animals. Kurupi's most distinctive feature, however, was an humongous penis that was ordinarily wound several times around his waist like a belt. Due to this feature, he was at one time revered by the Guaraní as the spirit of fertility.",
       "id": 1009
+    },
+    {
+      "name": "Kelley",
+      "age": 23498239,
+      "description": "The greatest monster ever exist",
+      "id": 1010
+    },
+    {
+      "name": "MonsterTest",
+      "age": 2783,
+      "description": "this monster was creating to make some test in the form validations",
+      "id": 1011
     }
   ]
 }
