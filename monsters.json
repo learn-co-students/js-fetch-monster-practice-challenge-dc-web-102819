@@ -6005,6 +6005,51 @@
       "age": 13,
       "description": "131313",
       "id": 1001
+    },
+    {
+      "id": 1002
+    },
+    {
+      "id": 1003
+    },
+    {
+      "id": 1004
+    },
+    {
+      "id": 1005
+    },
+    {
+      "id": 1006
+    },
+    {
+      "name": "perro",
+      "age": 99,
+      "description": "el perro mas viejo del mundo",
+      "id": 1007
+    },
+    {
+      "name": "Jasy Jatere",
+      "age": 6,
+      "description": "Jasy Jatere, which means literally \"a little piece of the moon\", is unique among his brothers in that he does not have a monstrous appearance. He is usually described as being a small man or perhaps a child, with light blonde hair and sometimes blue eyes. He is fair in appearance, sometimes described as even beautiful or enchanting, and carries with him a magical wand or staff, sometimes described as a golden cane, although what clothing he wears, if any at all, does not seem to be an important part of the legend. Like most of his brothers he dwells in the wild, he is considered to be the protector of the yerba mate plant. Sometimes he is also viewed as a protector of hidden treasures.",
+      "id": 1008
+    },
+    {
+      "name": "Kurupi",
+      "age": 981237917823,
+      "description": "Kurupi is said to be somewhat similar in appearance to another, more popular figure from Guaraní mythology, the Pombero. Like the Pombero, Kurupi is said to be short, ugly, and hairy. He makes his home in the wild forests of the region, and was considered to be the lord of the forests and protector of wild animals. Kurupi's most distinctive feature, however, was an humongous penis that was ordinarily wound several times around his waist like a belt. Due to this feature, he was at one time revered by the Guaraní as the spirit of fertility.",
+      "id": 1009
+    },
+    {
+      "name": "Kelley",
+      "age": 23498239,
+      "description": "The greatest monster ever exist",
+      "id": 1010
+    },
+    {
+      "name": "MonsterTest",
+      "age": 2783,
+      "description": "this monster was creating to make some test in the form validations",
+      "id": 1011
     }
   ]
 }
