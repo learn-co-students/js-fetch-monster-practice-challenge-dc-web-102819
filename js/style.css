@@ -1,0 +1,8 @@
+
+div {
+    margin: 25px 50px 75px 100px;
+    border-style: ridge;
+    border-width: 5px;
+    border: 2px solid grey;
+    border-radius: 5px;
+  }
