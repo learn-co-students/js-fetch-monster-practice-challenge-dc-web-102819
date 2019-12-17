@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    font-family: arial;
+  }
+
+h1 {
+  display: flex;
+  justify-content: center;
+  background: rgb(81, 162, 99);
+  opacity: .8;
+  height: 2rem;
+  padding: 2rem;
+}
+
+h2 {
+  justify-content: center;
+  margin: 1rem 2rem;
+}
+
+.card {
+    text-align: center;
+    border: grey solid 1px;
+    padding: 2rem;
+    width: 15rem;
+    height: 25rem;
+    display: inline-grid;
+    margin: 2rem 2rem;
+    box-shadow: 3px 4px #4be06b
+  }
+
+  #monster-form {
+    text-align: center;
+    border: grey solid 1px;
+    padding: 1rem;
+    width: 15rem;
+    height: 10rem;
+    display: inline;
+    margin: 1rem 2rem;
+   
+  }
