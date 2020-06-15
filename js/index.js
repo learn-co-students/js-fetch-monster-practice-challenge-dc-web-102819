@@ -1,74 +1,79 @@
+document.addEventListener("DOMContentLoaded", function () {
+  loadMonsters();
+  getMonsterForm().addEventListener("submit", addNewMonster);
+});
 
-        document.addEventListener("DOMContentLoaded" , function() {
-                loadMonsters() 
-                getMonsterForm().addEventListener("submit", addNewMonster)
-        })
+function loadMonsters() {
+  fetch("http://localhost:3000/monsters/?_limit=50&_page=3")
+    .then((response) => response.json())
+    .then((monsterArray) => {
+      monsterArray.forEach((monster) => DisplayMonster(monster));
+    });
+}
 
+function DisplayMonster(monster) {
+  let monsterContainer = document.getElementById("monster-container");
 
-        function loadMonsters() {
-            fetch("http://localhost:3000/monsters/?_limit=50&_page=3")
-            .then(response => response.json())
-            .then(monsterArray => {
-                monsterArray.forEach(monster => DisplayMonster(monster))
-            })
-        }
+  let monsterCard = document.createElement("div");
+  let monsterName = document.createElement("h3");
+  let monsterAge = document.createElement("h3");
+  let monsterDesc = document.createElement("p");
 
+  monsterCard.classList.add("card");
+  monsterCard.id = `monster-${monster.id}`;
 
-        function DisplayMonster(monster) {
+  monsterName.innerText = monster.name;
+  monsterAge.innerText = monster.age;
+  monsterDesc.innerText = monster.description;
 
-            let monsterContainer = document.getElementById("monster-container")
+  monsterContainer.append(monsterCard);
+  monsterCard.append(monsterName);
+  monsterCard.append(monsterAge);
+  monsterCard.append(monsterDesc);
 
-            let monsterCard = document.createElement("div") 
-            let monsterName = document.createElement('h3')
-            let monsterAge = document.createElement('h3')
-            let monsterDesc = document.createElement("p")
+  monsterCard.addEventListener("click", addNewMonster);
+}
 
-            monsterCard.classList.add("card") 
-            monsterCard.id = `monster-${monster.id}`
+function getMonsterForm() {
+  debugger;
+  return document.getElementById("new-pokemon-form");
+}
 
-            monsterName.innerText = monster.name 
-            monsterAge.innerText = monster.age 
-            monsterDesc.innerText = monster.description
-            
-            monsterContainer.append(monsterCard) 
-            monsterCard.append(monsterName)
-            monsterCard.append(monsterAge)
-            monsterCard.append(monsterDesc) 
+function addNewMonster(e) {
+  e.preventDefault();
+  let monsterName = document.getElementById("name-input").value;
+  let monsterAge = document.getElementById("age-input").value;
+  let monsterDesc = document.getElementById("description-input").value;
 
-            monsterCard.addEventListener("click", addNewMonster)
+  debugger;
 
-        } 
+  const configOptions = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: { name: monsterName, age: monsterAge, description: monsterDesc },
+  };
 
+  fetch("http://localhost:3000/monsters", configOptions)
+    .then((res) => res.json())
+    .then((monster) => DisplayMonster(monster));
+}
 
-        function getMonsterForm() {
-            debugger
-            return document.getElementById("new-pokemon-form")
-        }
+function createMonster(e) {
+  e.preventDefault();
 
+  const configOptions = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: { name: monsterName, age: monsterAge, description: monsterDesc },
+  };
 
-        function addNewMonster(e) {
-            e.preventDefault()
-            let monsterName = document.getElementById("name-input").value
-            let monsterAge =  document.getElementById("age-input").value
-            let monsterDesc = document.getElementById("description-input").value
-
-            debugger
-
-            const configOptions = {
-                method:"POST" , 
-                headers: {
-                    "Content-Type": "application/json",
-                    "Accept":"application/json"
-                }, 
-                body: { name: monsterName, age: monsterAge, description: monsterDesc }
-            }
-
-            fetch("http://localhost:3000/monsters" , configOptions) 
-            .then(res => res.json())
-            .then(monster =>DisplayMonster(monster) )
-
-        }
-
-
-
- 
+  fetch("http://localhost:3000/monsters", configOptions)
+    .then((res) => res.json())
+    .then((monster) => addNewMonster(monster));
+}
